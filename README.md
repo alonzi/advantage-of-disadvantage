@@ -16,7 +16,7 @@ roll twice with advantage and then keep the lower result
 Which situation produces the highest expected roll: advantage of disadvantage, disadvantage of advantage or rolling a single die?
 
 ## Answer
-Take disadvantage of advantage
+**Take disadvantage of advantage**
 
 result from run 1: 10,000,000 rolls
 > `regular expected roll                   10.499731925`
