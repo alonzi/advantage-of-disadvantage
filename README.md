@@ -29,5 +29,5 @@ result from a run with 10,000,000 rolls
 Adding this to your game causes more computation and arguing. If that is your thing, great! However I wouldn't reccomend this to your game. Instead I would get some old Dnd v 3.5 books from the discount bin and play that instead. Way way way more computation and arguing than you could ever hope for in 5e.
 
 #### Also for extended thoughts on this topic
-Please check out our podcast episode on the topic: https://minmaxfun.buzzsprout.com/349301/1403029-8-3-5-versus-5th-edition
-you can browse the full catalog here: https://minmaxfun.buzzsprout.com/349301/1403029-8-3-5-versus-5th-edition
+* Please check out our podcast episode on the topic: [#8 3.5 versus 5th edition](https://minmaxfun.buzzsprout.com/349301/1403029-8-3-5-versus-5th-edition)
+* You can browse the full catalog here: minmaxfun.com
