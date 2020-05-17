@@ -30,4 +30,4 @@ Adding this to your game causes more computation and arguing. If that is your th
 
 #### Also for extended thoughts on this topic
 * Please check out our podcast episode on the topic: [#8 3.5 versus 5th edition](https://minmaxfun.buzzsprout.com/349301/1403029-8-3-5-versus-5th-edition)
-* You can browse the full catalog here: [minmaxfun.com](minmaxfun.com)
+* You can browse the full catalog here: [minmaxfun.com](https://minmaxfun.com)
