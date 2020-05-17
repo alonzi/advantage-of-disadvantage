@@ -1,5 +1,5 @@
 # advantage-of-disadvantage
-This repository is a response to the fivethrityeight.com aricle entitled [Can You Find The Best Dungeons &amp; Dragons Strategy?]{https://fivethirtyeight.com/features/can-you-find-the-best-dungeons-dragons-strategy/}
+This repository is a response to the fivethrityeight.com aricle entitled [Can You Find The Best Dungeons &amp; Dragons Strategy?](https://fivethirtyeight.com/features/can-you-find-the-best-dungeons-dragons-strategy/)
 
 ## The Call
 On May 15, 2020. FiveThrityEight.com published an aricle entitled, 'Can You Find The Best Dungeons & Dragons Strategy?'. In it they postulate that rolling one die when you have advantage and disadvantage is yawn inducing, 'Yawn!'
