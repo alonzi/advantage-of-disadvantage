@@ -48,7 +48,7 @@ for i in range(N):
     rollsDOA.append(dis(adv(r1,r2),adv(r3,r4)))
 
 
-# Help: I would love for someone to do the math and tell me where I should round off and/or what size error bars I should use on these numbers
+# Help: I would love for someone to do the math and tell me where I should round off and/or what size error bars I should use on these numbers, I am too lazy to do the work
 # Show the results
 print()
 print('regular expected roll                  ',np.mean(rollsREG))
