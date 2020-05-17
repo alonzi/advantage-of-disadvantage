@@ -18,12 +18,20 @@ Which situation produces the highest expected roll: advantage of disadvantage, d
 ## Answer
 Take disadvantage of advantage
 
-result from a run with 10,000,000 rolls
+result from run 1: 10,000,000 rolls
 > `regular expected roll                   10.499731925`
 
 > `advantage of disadvantage expected roll 9.8337565`
 
 > `disadvantage of advantage expected roll 11.1661691`
+
+result from a run2: 10,000,000 rolls
+
+> `regular expected roll                   10.500074675`
+
+> `advantage of disadvantage expected roll 9.8345212`
+
+> `disadvantage of advantage expected roll 11.1660673`
 
 ### Moral of the story
 Adding this to your game causes more computation and arguing. If that is your thing, great! However I wouldn't reccomend this to your game. Instead I would get some old Dnd v 3.5 books from the discount bin and play that instead. Way way way more computation and arguing than you could ever hope for in 5e.
