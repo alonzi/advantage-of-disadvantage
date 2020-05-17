@@ -1,5 +1,5 @@
 # pete alonzi (datascientist@virginia.edu)
-# a program to answer the fivethrityeightriddle
+# a program to answer the fivethrityeight riddle
 # 2020-05-17
 # jed told me to
 
