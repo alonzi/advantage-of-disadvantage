@@ -53,3 +53,6 @@ What we want to really know is the cumulative probability distribution function 
 
 ### The plots
 ![](https://github.com/alonzi/advantage-of-disadvantage/blob/master/extraCredit.png)
+
+### The solution
+For every value of N just look it up on the histogram. For example for N=1 it doesn't matter, they will all do it. For N=20 just roll that single d20. For everything in the middle you have to look to see which curve is higher.
