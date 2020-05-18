@@ -3,7 +3,7 @@ This repository is a response to the fivethrityeight.com aricle entitled [Can Yo
 
 ## tl;dr
 * riddler classic: take disadvantage of advantage
-* extra credit: consult this plot
+* extra credit: consult the right hand plot
 ![](https://github.com/alonzi/advantage-of-disadvantage/blob/master/extraCredit.png)
 
 
