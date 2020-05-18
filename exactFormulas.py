@@ -55,9 +55,12 @@ ax1.set_xlabel("roll result")
 ax1.set_ylabel("probability of result")
 ax1.set_xticks(xticks, xlabels)
 
-ax2.plot(r1, 1.-dis_of_adv.cumsum(), color='blue', label='dis_of_adv')
-ax2.plot(r2, 1.-adv_of_dis.cumsum(), color='green', label='adv_of_dis')
-ax2.plot(r3, 1.-normal.cumsum(), color='red', label='normal')
+def rev_cdf(arr):
+    return np.array([sum(arr[i:]) for i in range(len(arr))])
+
+ax2.plot(r1, rev_cdf(dis_of_adv), color='blue', label='dis_of_adv')
+ax2.plot(r1, rev_cdf(adv_of_dis), color='green', label='adv_of_dis')
+ax2.plot(r1, rev_cdf(normal), color='red', label='normal')
 
 ax2.legend()
 ax2.set_title("Reverse CDF (probability to roll at least x)")
