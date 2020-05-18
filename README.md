@@ -2,8 +2,8 @@
 This repository is a response to the fivethrityeight.com aricle entitled [Can You Find The Best Dungeons &amp; Dragons Strategy?](https://fivethirtyeight.com/features/can-you-find-the-best-dungeons-dragons-strategy/)
 
 ## tl;dr
-riddler classic: take disadvantage of advantage
-extra credit: consult this plot
+* riddler classic: take disadvantage of advantage
+* extra credit: consult this plot
 ![](https://github.com/alonzi/advantage-of-disadvantage/blob/master/extraCredit.png)
 
 
