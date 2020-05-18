@@ -52,4 +52,4 @@ We have a podcast called Min Max Fun where we talk about making your games fun.
 What we want to really know is the cumulative probability distribution function (CDF) for each of these options. That will tell us what probability of the rolls are above a certain value. For example if we take the roll of 11 and consult the CDF whichever function is the lowest has 'used up the least amount of gas', in other words has the most probability of giving a result above that number. We will actually present the reverse CDF because then we are looking for the distribution with the highest value (something humans prefer).
 
 ### The plots
-![The reverse CDF shows which option to choose][https://github.com/alonzi/advantage-of-disadvantage/blob/master/extraCredit.png]
+![https://github.com/alonzi/advantage-of-disadvantage/blob/master/extraCredit.png]
