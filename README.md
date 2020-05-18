@@ -1,6 +1,12 @@
 # advantage-of-disadvantage
 This repository is a response to the fivethrityeight.com aricle entitled [Can You Find The Best Dungeons &amp; Dragons Strategy?](https://fivethirtyeight.com/features/can-you-find-the-best-dungeons-dragons-strategy/)
 
+## tl;dr
+riddler classic: take disadvantage of advantage
+extra credit: consult this plot
+![](https://github.com/alonzi/advantage-of-disadvantage/blob/master/extraCredit.png)
+
+
 ## The Challenge
 On May 15, 2020. FiveThrityEight.com published an aricle entitled, 'Can You Find The Best Dungeons & Dragons Strategy?'. In it they postulate that rolling one die when you have advantage and disadvantage is yawn inducing, 'Yawn!'
 
