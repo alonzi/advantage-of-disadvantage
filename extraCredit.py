@@ -65,13 +65,12 @@ print()
 fig, (ax1, ax2) = plt.subplots(1, 2)
 fig.suptitle('Extra Credit Plots')
 
+binning = [ i+0.5 for i in range(21)]
 
-
-# the histogram of the data
-num_bins = 20
-n, bins, patches = ax1.hist(rollsREG, num_bins, density=1, facecolor='red', alpha=1, histtype='step', linewidth=2,label="d20")
-n, bins, patches = ax1.hist(rollsAOD, num_bins, density=1, facecolor='green', alpha=1, histtype='step',linewidth=2,label="Advantage of Disadvantage")
-n, bins, patches = ax1.hist(rollsDOA, num_bins, density=1, facecolor='blue', alpha=1, histtype='step',linewidth=2, label="Disadvantage of Advantage")
+# generate PDF
+n, bins, patches = ax1.hist(rollsREG, binning, density=1, facecolor='red', alpha=1, histtype='step', linewidth=2,label="d20")
+n, bins, patches = ax1.hist(rollsAOD, binning, density=1, facecolor='green', alpha=1, histtype='step',linewidth=2,label="Advantage of Disadvantage")
+n, bins, patches = ax1.hist(rollsDOA, binning, density=1, facecolor='blue', alpha=1, histtype='step',linewidth=2, label="Disadvantage of Advantage")
 
 # make it understandable
 ax1.legend(loc=8)
@@ -79,22 +78,16 @@ ax1.set_title("PDF")
 plt.xlabel('result of roll')
 plt.ylabel('probability of result')
 
-
-
-
-
-# the histogram of the data in reverse cumulative 
-num_bins = 20
-n, bins, patches = ax2.hist(rollsREG, num_bins, density=1, facecolor='red', alpha=1, histtype='step', linewidth=2,label="d20", cumulative=-1)
-n, bins, patches = ax2.hist(rollsAOD, num_bins, density=1, facecolor='green', alpha=1, histtype='step',linewidth=2,label="Advantage of Disadvantage", cumulative=-1)
-n, bins, patches = ax2.hist(rollsDOA, num_bins, density=1, facecolor='blue', alpha=1, histtype='step',linewidth=2, label="Disadvantage of Advantage", cumulative=-1)
+# generate the reverse CDF 
+n, bins, patches = ax2.hist(rollsREG, binning, density=1, facecolor='red', alpha=1, histtype='step', linewidth=2,label="d20", cumulative=-1)
+n, bins, patches = ax2.hist(rollsAOD, binning, density=1, facecolor='green', alpha=1, histtype='step',linewidth=2,label="Advantage of Disadvantage", cumulative=-1)
+n, bins, patches = ax2.hist(rollsDOA, binning, density=1, facecolor='blue', alpha=1, histtype='step',linewidth=2, label="Disadvantage of Advantage", cumulative=-1)
 
 # make it understandable
 ax2.legend(loc='upper right')
-ax2.set_title("Reverse CDF (aka probability to roll N or better")
+ax2.set_title("Reverse CDF (aka probability to roll N or better)")
 plt.xlabel('result of roll')
 plt.ylabel('reverse cumulative probability')
-
 
 
 plt.show()
