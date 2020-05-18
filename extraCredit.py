@@ -16,43 +16,22 @@ import matplotlib.pyplot as plt
 N = 1000000 # number of die rolls (aka precision and runtime)
 d = 20 # number of sides on the die
 
-rollsREG = [] # list to contain the results of the rolls
-rollsAOD = [] # list ot contain the results of AOD
-rollsDOA = [] # list ot contain the results of DOA
-
-#  Help: these helper functions are quick and lazy. please PR suggestions
-def adv(x,y):
+def adv(r1,r2):
     ''' helper function to return advantage of two rolls '''
-    advantage = x
-    if y>x: advantage = y
-    return advantage
+    return np.maximum(r1,r2)
 
-def dis(x,y):
+def dis(r1,r2):
     ''' helper function to return disadvantage of two rolls '''
-    disadvantage = x
-    if y<x: disadvantage = y
-    return disadvantage
+    return np.minimum(r1,r2)
 
-
-for i in range(N):
-    
-    # roll 4d20
-    r = np.random.randint(1,d+1,size=4)
-    
-    # record regular rolls
-    rollsREG.extend(r)
-    
-    # record advantage of disadvantage
-    rollsAOD.append(adv(dis(r[0],r[1]),dis(r[2],r[3])))
-
-    # record disadvantage of advantage
-    rollsDOA.append(dis(adv(r[0],r[1]),adv(r[2],r[3])))
-
+rollsREG = np.random.randint(1, d+1, (N, 4))
+rollsAOD = adv(dis(rollsREG[:,0], rollsREG[:,1]), dis(rollsREG[:,2], rollsREG[:,3]))
+rollsDOA = dis(adv(rollsREG[:,0], rollsREG[:,1]), adv(rollsREG[:,2], rollsREG[:,3]))
 
 # Help: I would love for someone to do the math and tell me where I should round off and/or what size error bars I should use on these numbers, I am too lazy to do the work
 # Show the results
 print()
-print('last rolls',r)
+print('last rolls',rollsREG[-1,:])
 print('regular expected roll                  ',np.mean(rollsREG))
 print('advantage of disadvantage expected roll',np.mean(rollsAOD))
 print('disadvantage of advantage expected roll',np.mean(rollsDOA))
@@ -65,6 +44,8 @@ fig, (ax1, ax2) = plt.subplots(1, 2)
 fig.suptitle('Extra Credit Plots')
 
 binning = [ i+0.5 for i in range(21)]
+xticks = range(0,21)
+xlabels = [i if i%5 == 0 else "" for i in xticks]
 
 # generate PDF
 n, bins, patches = ax1.hist(rollsREG, binning, density=1, facecolor='red', alpha=1, histtype='step', linewidth=2,label="d20")
@@ -74,8 +55,9 @@ n, bins, patches = ax1.hist(rollsDOA, binning, density=1, facecolor='blue', alph
 # make it understandable
 ax1.legend(loc=8)
 ax1.set_title("PDF")
-plt.xlabel('result of roll')
-plt.ylabel('probability of result')
+ax1.set_xlabel('result of roll')
+ax1.set_ylabel('probability of result')
+ax1.set_xticks(xticks, xlabels)
 
 # generate the reverse CDF 
 n, bins, patches = ax2.hist(rollsREG, binning, density=1, facecolor='red', alpha=1, histtype='step', linewidth=2,label="d20", cumulative=-1)
@@ -85,9 +67,9 @@ n, bins, patches = ax2.hist(rollsDOA, binning, density=1, facecolor='blue', alph
 # make it understandable
 ax2.legend(loc='upper right')
 ax2.set_title("Reverse CDF (aka probability to roll N or better)")
-plt.xlabel('result of roll')
-plt.ylabel('reverse cumulative probability')
-
+ax2.set_xlabel('result of roll')
+ax2.set_ylabel('reverse cumulative probability')
+ax2.set_xticks(xticks, xlabels)
 
 plt.show()
 
