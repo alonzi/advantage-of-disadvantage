@@ -32,9 +32,9 @@ dis_of_adv = dis_of_adv / N**4
 adv_of_dis = adv_of_dis / N**4
 
 # print expected values
-print("normal roll EV: {0}".format(sum(np.arange(1,21) * normal)))
-print("dis_of_adv  EV: {0}".format(sum(np.arange(1,21) * dis_of_adv)))
-print("adv_of_dis  EV: {0}".format(sum(np.arange(1,21) * adv_of_dis)))
+print("normal roll EV: {0}".format(sum(np.arange(1,N+1) * normal)))
+print("dis_of_adv  EV: {0}".format(sum(np.arange(1,N+1) * dis_of_adv)))
+print("adv_of_dis  EV: {0}".format(sum(np.arange(1,N+1) * adv_of_dis)))
 
 fig, (ax1,ax2) = plt.subplots(1,2)
 
@@ -42,7 +42,7 @@ barWidth = 0.25
 r1 = range(1,N+1)
 r2 = [x + barWidth for x in r1]
 r3 = [x + barWidth for x in r2]
-xticks = range(0,21)
+xticks = range(0,N+1)
 xlabels = [i if i%5 == 0 else "" for i in xticks]
 
 ax1.bar(r1, dis_of_adv, color='blue', width=barWidth, edgecolor='white', label='dis_of_adv')
