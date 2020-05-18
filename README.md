@@ -5,6 +5,7 @@ This repository is a response to the fivethrityeight.com aricle entitled [Can Yo
 * riddler classic: take disadvantage of advantage
 * extra credit: consult the right hand plot
 ![](https://github.com/alonzi/advantage-of-disadvantage/blob/master/extraCredit.png)
+* If someone wants to pull request to add axis labels to the left plot that would be super awesome. Also to clean up the horizontal tics to line up with integers. I will literally mail you a d20.
 
 
 ## The Challenge
