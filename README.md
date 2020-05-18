@@ -1,7 +1,7 @@
 # advantage-of-disadvantage
 This repository is a response to the fivethrityeight.com aricle entitled [Can You Find The Best Dungeons &amp; Dragons Strategy?](https://fivethirtyeight.com/features/can-you-find-the-best-dungeons-dragons-strategy/)
 
-## The Call
+## The Challenge
 On May 15, 2020. FiveThrityEight.com published an aricle entitled, 'Can You Find The Best Dungeons & Dragons Strategy?'. In it they postulate that rolling one die when you have advantage and disadvantage is yawn inducing, 'Yawn!'
 
 They propose (while certainly worse for gameplay) two 'more mathematically interesting ways' to combine advantage and disadvantage.
@@ -43,3 +43,8 @@ We have a podcast called Min Max Fun where we talk about making your games fun.
 
 ##### Please please please please PR me if you see an improvement!
 * I left a couple notes in the code where I would love a PR.
+
+
+## Extra Credit!
+> Instead of maximizing your expected roll, suppose you need to roll N or better with your 20-sided die. For each value of N, is it better to use advantage of disadvantage, disadvantage of advantage or rolling a single die?
+
