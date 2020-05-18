@@ -1,6 +1,8 @@
-# pete alonzi (datascientist@virginia.edu)
+# pete alonzi (datascientist@virginia.edu) (alonzi on github)
+# contributor: wshanley (on github)
 # a program to answer the fivethrityeight riddle
 # 2020-05-17
+# patch 1: 2020-05-18
 # jed told me to
 
 # vscode environment setup: https://code.visualstudio.com/docs/python/python-tutorial
@@ -17,21 +19,22 @@ N = 1000000 # number of die rolls (aka precision and runtime)
 d = 20 # number of sides on the die
 
 def adv(r1,r2):
-    ''' helper function to return advantage of two rolls '''
+    ''' helper function to return advantage of two rolls (flavor rename)'''
     return np.maximum(r1,r2)
 
 def dis(r1,r2):
-    ''' helper function to return disadvantage of two rolls '''
+    ''' helper function to return disadvantage of two rolls (flavor rename)'''
     return np.minimum(r1,r2)
 
-rollsREG = np.random.randint(1, d+1, (N, 4))
-rollsAOD = adv(dis(rollsREG[:,0], rollsREG[:,1]), dis(rollsREG[:,2], rollsREG[:,3]))
-rollsDOA = dis(adv(rollsREG[:,0], rollsREG[:,1]), adv(rollsREG[:,2], rollsREG[:,3]))
+roll4 = np.random.randint(1, d+1, (N, 4))
+rollsREG = [ i for r in roll4 for i in r ] # unroll for plotting
+rollsAOD = adv(dis(roll4[:,0], roll4[:,1]), dis(roll4[:,2], roll4[:,3]))
+rollsDOA = dis(adv(roll4[:,0], roll4[:,1]), adv(roll4[:,2], roll4[:,3]))
 
 # Help: I would love for someone to do the math and tell me where I should round off and/or what size error bars I should use on these numbers, I am too lazy to do the work
 # Show the results
 print()
-print('last rolls',rollsREG[-1,:])
+print('last rolls',rollsREG[-4:])
 print('regular expected roll                  ',np.mean(rollsREG))
 print('advantage of disadvantage expected roll',np.mean(rollsAOD))
 print('disadvantage of advantage expected roll',np.mean(rollsDOA))
@@ -43,8 +46,8 @@ print()
 fig, (ax1, ax2) = plt.subplots(1, 2)
 fig.suptitle('Extra Credit Plots')
 
-binning = [ i+0.5 for i in range(21)]
-xticks = range(0,21)
+binning = [ i+0.5 for i in range(d+1)]
+xticks = range(0,d+1)
 xlabels = [i if i%5 == 0 else "" for i in xticks]
 
 # generate PDF
