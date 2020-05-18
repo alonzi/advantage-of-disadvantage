@@ -36,8 +36,7 @@ def dis(x,y):
 
 for i in range(N):
     
-    # Help: please pr a oneliner for this thatputs it into an interable
-    # no list comprehension allowed, that stuff is lame
+    # roll 4d20
     r = np.random.randint(1,d+1,size=4)
     
     # record regular rolls
