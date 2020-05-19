@@ -14,7 +14,6 @@ rollsREG = [] # list to contain the results of the rolls
 rollsAOD = [] # list ot contain the results of AOD
 rollsDOA = [] # list ot contain the results of DOA
 
-#  Help: these helper functions are quick and lazy. please PR suggestions
 def adv(r1,r2):
     ''' helper function to return advantage of two rolls '''
     return max(r1, r2)
