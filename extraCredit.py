@@ -1,5 +1,5 @@
 # pete alonzi (datascientist@virginia.edu) (alonzi on github)
-# contributor: wshanley (on github)
+# contributors: wshanley, danielcmccarthy
 # a program to answer the fivethrityeight riddle
 # 2020-05-17
 # patch 1: 2020-05-18
