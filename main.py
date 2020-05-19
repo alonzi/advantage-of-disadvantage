@@ -5,7 +5,6 @@
 
 #//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-import random
 import numpy as np
 
 N = 10000000 # number of die rolls (aka precision and runtime)
@@ -18,25 +17,15 @@ rollsDOA = [] # list ot contain the results of DOA
 #  Help: these helper functions are quick and lazy. please PR suggestions
 def adv(r1,r2):
     ''' helper function to return advantage of two rolls '''
-    advantage = r1
-    if r2>r1: advantage= r2
-    return advantage
+    return max(r1, r2)
 
 def dis(r1,r2):
     ''' helper function to return disadvantage of two rolls '''
-    disadvantage = r1
-    if r2<r1: disadvantage=r2
-    return disadvantage
-
+    return min(r1, r2)
 
 for i in range(N):
-    
-    # Help: please pr a oneliner for this thatputs it into an interable
-    # no list comprehension allowed, that stuff is lame
-    r1 = random.randint(1,d)
-    r2 = random.randint(1,d)
-    r3 = random.randint(1,d)
-    r4 = random.randint(1,d)
+
+    r1, r2, r3, r4 = np.random.randint(1, d, 4)
 
     # record regular rolls
     rollsREG.extend([r1,r2,r3,r4])
