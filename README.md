@@ -1,6 +1,8 @@
 # advantage-of-disadvantage
 This repository is a response to the fivethrityeight.com aricle entitled [Can You Find The Best Dungeons &amp; Dragons Strategy?](https://fivethirtyeight.com/features/can-you-find-the-best-dungeons-dragons-strategy/)
 
+* NB: [We did not win but put up a good fight, we'll get them next time](https://fivethirtyeight.com/features/somethings-fishy-in-the-state-of-the-riddler/)
+
 ## tl;dr
 * riddler classic: take disadvantage of advantage
 * extra credit: consult the right hand plot, pick a value for N, take the curve that is highest
