@@ -43,7 +43,7 @@ print()
 
 # Extra Credit, just make a histogram for each and pick the most probable
 #plt.style.use('fivethirtyeight')
-fig, (ax1, ax2) = plt.subplots(1, 2)
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 fig.suptitle('Extra Credit Plots')
 
 binning = [ i+0.5 for i in range(d+1)]
@@ -77,6 +77,8 @@ ax2.set_xlabel('result of roll')
 ax2.set_ylabel('reverse cumulative probability')
 #same update made for ax2 as for ax1 to align xticks to xlabels
 ax2.set_xticks(range(0,25, 5))
+
+
 
 plt.show()
 
