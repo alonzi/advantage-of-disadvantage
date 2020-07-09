@@ -43,10 +43,11 @@ print()
 
 # Extra Credit, just make a histogram for each and pick the most probable
 #plt.style.use('fivethirtyeight')
-fig, (ax1, ax2) = plt.subplots(1, 2)
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
 fig.suptitle('Extra Credit Plots')
 
 binning = [ i+0.5 for i in range(d+1)]
+
 xticks = range(0,d+1)
 xlabels = [i if i%5 == 0 else "" for i in xticks]
 
@@ -60,7 +61,9 @@ ax1.legend(loc=8)
 ax1.set_title("PDF")
 ax1.set_xlabel('result of roll')
 ax1.set_ylabel('probability of result')
-ax1.set_xticks(xticks, xlabels)
+#updated set_xticks statement to align ticks with integers set from xlabels
+ax1.set_xticks(range(0, 25, 5))
+#ax1.set_xticks(xticks, xlabels)
 
 # generate the reverse CDF 
 n, bins, patches = ax2.hist(rollsREG, binning, density=1, facecolor='red', alpha=1, histtype='step', linewidth=2,label="d20", cumulative=-1)
@@ -72,7 +75,10 @@ ax2.legend(loc='upper right')
 ax2.set_title("Reverse CDF (aka probability to roll N or better)")
 ax2.set_xlabel('result of roll')
 ax2.set_ylabel('reverse cumulative probability')
-ax2.set_xticks(xticks, xlabels)
+#same update made for ax2 as for ax1 to align xticks to xlabels
+ax2.set_xticks(range(0,25, 5))
+
+
 
 plt.show()
 
