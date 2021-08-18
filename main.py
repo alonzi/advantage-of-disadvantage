@@ -8,8 +8,12 @@
 import numpy as np
 
 N = 10000000 # number of die rolls (aka precision and runtime)
-d = 20 # number of sides on the die
-
+d = input("Enter integer for n-sided die, unknown inputs will default to D20.\n Standard Die are: D4, D6, D8, D10, D12, D20, D100\n")
+if not type(d) is int:
+    d = 20
+elif d < 2 or d > 101:
+    d = 20 
+    
 rollsREG = [] # list to contain the results of the rolls
 rollsAOD = [] # list ot contain the results of AOD
 rollsDOA = [] # list ot contain the results of DOA
