@@ -6,14 +6,21 @@
 #//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 import numpy as np
+import sys 
 
-N = 10000000 # number of die rolls (aka precision and runtime)
-d = input("Enter integer for n-sided die, unknown inputs will default to D20.\n Standard Die are: D4, D6, D8, D10, D12, D20, D100\n")
-if not type(d) is int:
+try:
+    d = int(sys.argv[1])
+except: 
     d = 20
-elif d < 2 or d > 101:
+
+if d < 2 or d > 100:
     d = 20 
-    
+
+print("Now testing a d", d, sep="")
+
+#d = 20 # number of sides on the die
+N = 10000000 # number of die rolls (aka precision and runtime)
+
 rollsREG = [] # list to contain the results of the rolls
 rollsAOD = [] # list ot contain the results of AOD
 rollsDOA = [] # list ot contain the results of DOA
