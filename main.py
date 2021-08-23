@@ -6,9 +6,20 @@
 #//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 import numpy as np
+import sys 
 
+try:
+    d = int(sys.argv[1])
+except: 
+    d = 20
+
+if d < 2 or d > 100:
+    d = 20 
+
+print("Now testing a d", d, sep="")
+
+#d = 20 # number of sides on the die
 N = 10000000 # number of die rolls (aka precision and runtime)
-d = 20 # number of sides on the die
 
 rollsREG = [] # list to contain the results of the rolls
 rollsAOD = [] # list ot contain the results of AOD
